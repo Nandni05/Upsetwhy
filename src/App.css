@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&family=Sacramento&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 20% 20%, #ffdce7 0%, transparent 30%),
+    radial-gradient(circle at 80% 80%, #ffe8ef 0%, transparent 30%),
+    linear-gradient(135deg, #fff1f5, #ffe4ec);
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts span {
+  position: absolute;
+
+  color: rgba(238, 106, 143, 0.25);
+
+  font-size: 35px;
+
+  bottom: -50px;
+
+  animation: floatHeart 9s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+  left: 35%;
+  animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+  left: 65%;
+  animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+  left: 80%;
+  animation-delay: 5s;
+}
+
+.hearts span:nth-child(7) {
+  left: 92%;
+  animation-delay: 6s;
+}
+
+@keyframes floatHeart {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   GENERAL CARD
+========================= */
+
+.card {
+  width: min(90%, 520px);
+
+  min-height: 460px;
+
+  padding: 50px 35px;
+
+  border-radius: 35px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  backdrop-filter: blur(20px);
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 25px 70px rgba(180, 85, 115, 0.18);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  animation: appear 0.7s ease;
+}
+
+@keyframes appear {
+
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+/* =========================
+   PAGE 1
+========================= */
+
+.emoji {
+  font-size: 70px;
+
+  margin-bottom: 20px;
+
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+}
+
+.card h1 {
+  color: #4c2935;
+
+  font-size: 32px;
+
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #9a6b79;
+
+  font-size: 16px;
+}
+
+.funny-message {
+  margin-top: 25px;
+
+  color: #dc5578;
+
+  font-weight: 600;
+
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 45px;
+
+  min-height: 80px;
+}
+
+button {
+  border: none;
+
+  padding: 14px 28px;
+
+  border-radius: 50px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.yes-btn {
+  background: #ff88a5;
+
+  color: white;
+
+  position: relative;
+
+  transition: transform 0.25s ease;
+}
+
+.yes-btn:hover {
+  background: #ff6f93;
+}
+
+.no-btn {
+  background: white;
+
+  color: #d64e72;
+
+  border: 2px solid #ffb3c6;
+}
+
+.no-btn:hover {
+  transform: scale(1.1);
+
+  background: #fff2f6;
+}
+
+/* =========================
+   PAGE 2
+========================= */
+
+.big-emoji {
+  font-size: 75px;
+
+  margin-bottom: 20px;
+
+  animation: bounce 1.5s infinite;
+}
+
+.reveal-text {
+  color: #68434f;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  margin-top: 10px;
+}
+
+.unlock-text {
+  margin-top: 20px;
+
+  color: #a47785;
+}
+
+.open-btn {
+  margin-top: 35px;
+
+  background: #ff7f9f;
+
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(255, 127, 159, 0.3);
+}
+
+.open-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+
+  background: #ff6389;
+}
+
+/* =========================
+   CERTIFICATE
+========================= */
+
+.certificate-wrapper {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  animation: appear 0.7s ease;
+}
+
+.certificate {
+  width: min(92vw, 750px);
+
+  min-height: 600px;
+
+  position: relative;
+
+  padding: 55px 60px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf3,
+      #fffdf9
+    );
+
+  border: 10px double #e8a4b7;
+
+  box-shadow:
+    0 25px 70px rgba(180, 85, 115, 0.2);
+
+  color: #53313c;
+}
+
+/* Decorative inner border */
+
+.certificate::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 15px;
+
+  border: 1px solid #edc1cd;
+
+  pointer-events: none;
+}
+
+.certificate-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #d87591;
+
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+.official {
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  color: #a87381;
+
+  margin-bottom: 18px;
+}
+
+.certificate h1 {
+  font-family: "DM Serif Display", serif;
+
+  font-size: 42px;
+
+  line-height: 1.15;
+
+  color: #6d3d4b;
+}
+
+.certificate h1 span {
+  color: #d65c7d;
+}
+
+.divider {
+  font-size: 32px;
+
+  color: #d58aa0;
+
+  margin: 15px 0;
+}
+
+.certifies {
+  font-size: 15px;
+
+  color: #8f6974;
+
+  margin: 7px 0;
+}
+
+.her-name,
+.your-name {
+  font-family: "Sacramento", cursive;
+
+  font-size: 43px;
+
+  color: #c95172;
+
+  font-weight: 400;
+}
+
+.your-name {
+  font-size: 35px;
+
+  color: #744451;
+}
+
+.reason {
+  font-size: 15px;
+
+  color: #77515c;
+
+  margin-top: 5px;
+}
+
+.valid-box {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  padding: 12px 28px;
+
+  background: #fff0f4;
+
+  border-radius: 15px;
+
+  color: #70404e;
+
+  font-size: 14px;
+}
+
+.valid-box p:last-child {
+  margin-top: 3px;
+
+  color: #d15878;
+
+  font-weight: 600;
+}
+
+.certificate-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 30px;
+
+  padding: 0 35px;
+}
+
+.signature {
+  font-family: "Sacramento", cursive;
+
+  font-size: 22px;
+
+  color: #76505b;
+}
+
+.signature .line {
+  width: 150px;
+
+  border-top: 1px solid #9f7883;
+
+  margin-bottom: 5px;
+}
+
+.signature p {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  color: #9d7882;
+
+  letter-spacing: 1px;
+}
+
+.seal {
+  width: 85px;
+
+  height: 85px;
+
+  border-radius: 50%;
+
+  border: 3px solid #d57591;
+
+  outline: 2px dashed #e3a3b4;
+
+  outline-offset: -7px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: #c95172;
+
+  font-size: 10px;
+}
+
+.seal span {
+  font-size: 10px;
+}
+
+.seal small {
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+.seal b {
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.accept-btn {
+  margin-top: 28px;
+
+  background: #d65c7d;
+
+  color: white;
+
+  position: relative;
+
+  z-index: 2;
+
+  box-shadow:
+    0 8px 20px rgba(214, 92, 125, 0.3);
+}
+
+.accept-btn:hover {
+  transform: scale(1.05);
+
+  background: #c94c6e;
+}
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+.celebration {
+  font-size: 70px;
+
+  margin-bottom: 25px;
+
+  animation: bounce 1.5s infinite;
+}
+
+.final-text {
+  color: #68434f;
+
+  font-size: 18px;
+
+  margin-top: 10px;
+}
+
+.final-message {
+  margin-top: 30px;
+
+  padding: 15px 25px;
+
+  border-radius: 20px;
+
+  background: #fff0f4;
+
+  color: #d25276;
+
+  font-weight: 700;
+
+  font-size: 20px;
+}
+
+.confetti {
+  margin-top: 35px;
+
+  font-size: 23px;
+
+  letter-spacing: 7px;
+
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .card {
+    padding: 40px 25px;
+
+    min-height: 430px;
+  }
+
+  .card h1 {
+    font-size: 27px;
+  }
+
+  .certificate-wrapper {
+    padding: 10px;
+  }
+
+  .certificate {
+    padding: 40px 25px;
+
+    min-height: 600px;
+
+    border-width: 7px;
+  }
+
+  .certificate h1 {
+    font-size: 30px;
+  }
+
+  .her-name {
+    font-size: 38px;
+  }
+
+  .your-name {
+    font-size: 30px;
+  }
+
+  .certificate-bottom {
+    padding: 0;
+
+    margin-top: 25px;
+  }
+
+  .seal {
+    width: 70px;
+    height: 70px;
+  }
+
+  .signature .line {
+    width: 110px;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  button {
+    padding: 12px 21px;
+  }
+}
